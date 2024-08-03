@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediplus Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 50px;
+            background-color: whitesmoke;
+            border: 1px solid rgb(214, 200, 200);
+        }
+
+        .topbar-1 ul {
+            display: flex;
+            list-style: none;
+            margin-left: 401px;
+        }
+
+        .topbar-1 ul li {
+            padding: 15px;
+        }
+
+        .topbar-1 ul li a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        .topbar-2 ul {
+            display: flex;
+            list-style: none;
+            margin-top: -48px;
+            margin-left: 999px;
+        }
+
+        .topbar-2 ul li {
+            padding: 15px;
+        }
+
+        .mainmenu {
+            width: 100%;
+            height: 60px;
+            background-color: whitesmoke;
+            border: 1px solid rgb(214, 200, 200);
+        }
+
+        .mainmenulogo {
+            margin-left: 404px;
+        }
+
+        .menudropdown ul {
+            display: flex;
+            list-style: none;
+            margin-left: 688px;
+            margin-top: -47px;
+
+        }
+
+        .menudropdown ul li {
+            padding: 15px;
+        }
+
+        .menudropdown ul li a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        .menudropdown ul li a:hover {
+            color: #1A76D1;
+            border-bottom: 2px solid #1A76D1;
+
+        }
+
+        .menudropdown1 {
+            display: none;
+
+
+        }
+
+        .menudropdown1 ul {
+            display: block;
+
+
+        }
+
+        .menudropdown ul li:hover .menudropdown1 {
+
+            display: block;
+            position: absolute;
+            margin-top: 50px;
+            margin-left: -720px;
+
+        }
+
+        .menudropdown2 {
+            display: none;
+
+        }
+
+        .menudropdown2 ul {
+            display: block;
+
+
+        }
+
+        .menudropdown ul li:hover .menudropdown2 {
+            display: block;
+            position: absolute;
+            margin-top: 50px;
+            margin-left: -720px;
+        }
+
+        .menudropdown1 ul li a {
+            background-color: aliceblue;
+            padding: 10px 12px;
+            border: 2px solid #1A76D1;
+
+        }
+
+        .bookappointment {
+            margin-left: 1276px;
+            margin-top: -35px;
+
+
+        }
+
+        .bookappointment a {
+            border: 2px solid #1A76D1;
+            padding: 10px 12px;
+            background-color: #1A76D1;
+            color: white;
+            text-decoration: none;
+        }
+
+        .bookappointment a:hover {
+            background-color: black;
+        }
+
+        .slider {
+            width: 100%;
+            height: 500px;
+            background-image: url(slider.jpg);
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .slider .sliderh1 span {
+            color: #1A76D1;
+        }
+
+        .sliderh1 {
+            position: absolute;
+            left: 410px;
+            top: 238px;
+        }
+
+        .sliderh2 {
+            position: absolute;
+            left: 416px;
+            top: 330px;
+            font-size: 20px;
+        }
+
+        .getappointment {
+            position: absolute;
+            top: 426px;
+            left: 417px;
+        }
+
+        .getappointment a {
+            text-decoration: none;
+            color: white;
+            background-color: #1A76D1;
+            padding: 10px 12px;
+            border: 3px solid #1A76D1;
+
+
+        }
+
+        .getappointment a:hover {
+
+            background-color: black;
+
+        }
+
+        .Aboutus {
+            position: absolute;
+            top: 427px;
+            left: 575px;
+        }
+
+        .Aboutus a {
+            border: 2px solid black;
+            border-radius: 5px;
+            text-decoration: none;
+            padding: 12px 26px;
+            background-color: black;
+            color: white;
+        }
+
+        .Aboutus a:hover {
+            background-color: #1A76D1;
+        }
+
+        .card1 {
+            width: 337px;
+            height: 275px;
+            background-color: #1A76D1;
+            position: absolute;
+            left: 417px;
+            top: 522px;
+            border-radius: 5px;
+        }
+
+        .card1 img {
+            margin-left: 285px;
+            margin-top: 240px;
+            opacity: 0.5;
+        }
+
+        .learna {
+            top: 26px;
+            left: 30px;
+            position: absolute;
+            color: white;
+
+
+        }
+
+        .EmergencyCases {
+            top: 32px;
+            left: -2px;
+            position: absolute;
+            font-size: 25px;
+        }
+
+        .Loremipsum {
+            top: 73px;
+            left: -2px;
+            position: absolute;
+            font-size: 18px;
+
+        }
+
+        .adipiscingelit {
+            top: 104px;
+            left: -2px;
+            position: absolute;
+            font-size: 18px;
+
+
+        }
+
+        .convallis {
+            top: 131px;
+            left: -1px;
+            position: absolute;
+            font-size: 18px;
+
+
+        }
+
+        .LEARNMORE a {
+            top: 199px;
+            left: -1px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue;
+            text-decoration: none;
+
+        }
+
+        .LEARNMORE a i {
+            top: 5px;
+            left: 6px;
+            position: absolute;
+
+
+        }
+
+        .card2 {
+            width: 338px;
+            height: 275px;
+            background-color: #1A76D1;
+            position: absolute;
+            left: 379px;
+            top: 4px;
+            border-radius: 5px;
+
+        }
+
+        .FuscePorttitor {
+            top: 28px;
+            left: 27px;
+            position: absolute;
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .DoctorsTimetable {
+            top: 71px;
+            left: 27px;
+            position: absolute;
+            color: white;
+            font-size: 25px;
+
+        }
+
+        .Loremipsumsitametconsectetur {
+            top: 125px;
+            left: 27px;
+            position: absolute;
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .adipiscingelitVivamuseteratinlacus {
+            top: 158px;
+            left: 27px;
+            position: absolute;
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .convallissodales {
+            top: 186px;
+            left: 27px;
+            position: absolute;
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .LEARNMORE a {
+            top: 199px;
+            left: -1px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue;
+            text-decoration: none;
+
+        }
+
+        .LEARNMORE a i {
+            top: 7px;
+            left: 6px;
+            position: absolute;
+
+        }
+
+        .card3 {
+            width: 338px;
+            height: 275px;
+            background-color: #1A76D1;
+            position: absolute;
+            left: 755px;
+            top: 2px;
+            border-radius: 5px;
+
+        }
+
+        .card3 img {
+            margin-left: 276px;
+            margin-top: 229px;
+            opacity: 0.5;
+
+        }
+
+        .Donecluctus {
+            top: 32px;
+            left: 35px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue
+        }
+
+        .OpeningHours {
+            top: 74px;
+            left: 34px;
+            position: absolute;
+            font-size: 25px;
+            color: aliceblue
+        }
+
+        .MondayFridayp {
+            top: 113px;
+            left: 42px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue
+        }
+
+        .Saturday {
+            top: 141px;
+            left: 42px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue
+        }
+
+        .MondayThusday {
+            top: 168px;
+            left: 42px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue
+        }
+
+        .LEARN a {
+            top: 199px;
+            left: -1px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        .time {
+            top: 114px;
+            left: 235px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue
+        }
+
+        .tabul {
+            top: 143px;
+            left: 237px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue
+        }
+
+        .date {
+            top: 171px;
+            left: 237px;
+            position: absolute;
+            font-size: 18px;
+            color: aliceblue
+        }
+
+        .AlwaysReady {
+            top: 319px;
+            left: -470px;
+            position: absolute;
+            font-size: 39px;
+            color: black
+        }
+
+        .YourFamily {
+            top: 367px;
+            left: -276px;
+            position: absolute;
+            font-size: 39px;
+            color: black
+        }
+
+        .img1 {
+            position: absolute;
+            top: 946px;
+            left: 952px;
+        }
+
+        .ametconsect {
+            top: 999px;
+            left: 725px;
+            position: absolute;
+            font-size: 18px;
+            color: #888;
+        }
+
+        .pretiumts {
+            top: 1017px;
+            left: 956px;
+            position: absolute;
+            font-size: 18px;
+            color: #888;
+        }
+
+        .signle-icon {
+            top: 1096px;
+            left: 606px;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(180, 180, 192);
+            border-radius: 50%;
+
+        }
+
+        .signle-icon .fa-solid {
+
+            position: absolute;
+            top: 32px;
+            left: 28px;
+        }
+
+        .signle-icon:hover {
+            background-color: #1A76D1;
+        }
+
+        .EmergencyHelp {
+            top: 1224px;
+            left: 581px;
+            position: absolute;
+            font-size: 25px;
+            color: black;
+        }
+
+        .consectetur {
+            top: 1274px;
+            left: 514px;
+            position: absolute;
+            font-size: 18px;
+            color: #888;
+        }
+
+        .Maecenasmi {
+            top: 1300px;
+            left: 566px;
+            position: absolute;
+            font-size: 18px;
+            color: #888;
+
+        }
+
+        .dot1 {
+            color: #1A76D1;
+            font-size: 34px;
+            top: 1120px;
+            left: 822px;
+            position: absolute;
+        }
+
+        .signle-icon2 {
+            top: 1092px;
+            left: 1094px;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgb(180, 180, 192);
+            border-radius: 50%;
+
+        }
+        .signle-icon2 img {
+            position: absolute;
+            top: 26px;
+            left: 19px;
+            background-color: #74c0fc;
+           
+
+        }
+        .signle-icon2 :hover {
+            background-color: #11b434;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="topbar-1">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Doctors</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="topbar-2">
+            <ul>
+                <li><i class="fa fa-phone" style="color: #1A76D1;"></i>+880 1234 56789</li>
+                <li><i class="fa fa-envelope" style="color: #1A76D1;"></i><a
+                        href="mailto:support@yourmail.com"></a>support@yourmail.com</li>
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="mainmenu">
+        <div class="mainmenulogo">
+            <img src="logo.png" width="200px" height="50px">
+        </div>
+        <div class="menudropdown">
+            <ul>
+                <li><a href="">Home<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="menudropdown1">
+                        <ul>
+                            <li><a href="">Home Page 1</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Doctor</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Pages<i class="fa-solid fa-angle-down"></i></a>
+                    <div class="menudropdown2">
+                        <ul>
+                            <li><a href="">404 Error</a></li>
+                        </ul>
+
+                    </div>
+
+                </li>
+
+                <li><a href="">Blogs<i class="fa-solid fa-angle-down"></i></a></li>
+                <li><a href="">Contact Us</a></li>
+
+
+            </ul>
+
+        </div>
+        <div class="bookappointment">
+            <a href="appointment.html">Book Appointment</a>
+
+        </div>
+    </div>
+    <div class="slider">
+        <div class="sliderh1">
+            <h1>We provide <span>Medical </span> Services<br>That you can <span>Trust!</span></h1>
+
+
+        </div>
+        <div class="sliderh2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque,<br> faucibus
+                libero eu, gravida quam.</p>
+        </div>
+        <div class="getappointment">
+            <a href="#">Get Appointment</a>
+
+        </div>
+        <div class="Aboutus">
+            <a href="#">About Us</a>
+
+        </div>
+
+    </div>
+    <div class="maincard">
+        <div class="card1">
+            <img src="ambu.png" width="50px" height="30px">
+            <div class="learna">
+                Lorem Amet
+                <div class="EmergencyCases">
+                    EmergencyCases
+
+                </div>
+                <div class="Loremipsum">
+                    Loremipsumsitametconsectetur
+
+                </div>
+                <div class="adipiscingelit">
+                    adipiscingelit.Vivamuseteratinlacus
+
+                </div>
+                <div class="convallis">
+                    convallissodales.
+
+                </div>
+                <div class="LEARNMORE">
+                    <a href="#">LEARNMORE<i class="fa fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="card2">
+                <img src="prescription.jpg" width="50px" height="30px">
+                <div class="FuscePorttitor">
+                    Fusce Porttitor
+
+                </div>
+                <div class="DoctorsTimetable">
+                    Doctors Timetable
+
+                </div>
+                <div class="Loremipsumsitametconsectetur">
+                    Lorem ipsum dolor sit amet consectetur
+                </div>
+                <div class="adipiscingelitVivamuseteratinlacus">
+                    adipiscing elit. Vivamus et erat in lacus
+
+                </div>
+                <div class="convallissodales">
+                    convallis sodales.
+
+                </div>
+                <div class="LEARNMORE">
+                    <a href="#">LEARNMORE<i class="fa fa-long-arrow-right"></i></a>
+
+                </div>
+            </div>
+            <div class="card3">
+                <img src="clock.jpg" width="70px" height="50px">
+                <div class="Donecluctus">
+                    Donec Iuctus
+
+                </div>
+                <div class="OpeningHours">
+                    Opening Hours
+
+                </div>
+                <div class="MondayFridayp">
+                    monday - fridayp
+
+                </div>
+                <div class="Saturday">
+                    Saturday
+
+                </div>
+                <div class="MondayThusday">
+                    monday Thusday
+
+                </div>
+                <div class="LEARN">
+                    <a href="#">LEARNMORE<i class="fa fa-long-arrow-right"></i></a>
+
+                </div>
+                <div class="time">
+                    8.00-20.00
+
+
+                </div>
+                <div class="tabul">
+                    9.00-18.30
+
+                </div>
+                <div class="date">
+                    9.00-15.00
+
+
+                </div>
+                <div class="AlwaysReady">
+                    We Are Always Ready to Help You &
+
+                </div>
+                <div class="YourFamily">
+                    Your Family
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="img1">
+        <img src="section-img.png" width="60px" height="30px">
+
+
+    </div>
+    <div class="ametconsect">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet.
+
+    </div>
+    <div class="pretiumts">
+        pretiumts
+
+    </div>
+    <div class="signle-icon">
+        <i class="fa-solid fa-truck-medical fa-flip-horizontal fa-2x" style="color: #74c0fc;"></i>
+
+    </div>
+    <div class="EmergencyHelp">
+        Emergency Help
+
+    </div>
+    <div class="consectetur">
+        Lorem ipsum sit, consectetur adipiscing elit.
+
+    </div>
+    <div class="Maecenasmi">
+        Maecenas mi quam vulputate
+
+    </div>
+    <div class="dot1">
+        ....................
+
+    </div>
+    <div class="signle-icon2">
+        <img src="doctorlogo.png" width="60px" height="50px">
+
+
+    </div>
+    <div class="">
+    </div>
+
+</body>
+
+</html>
